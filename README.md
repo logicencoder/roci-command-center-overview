@@ -1,5 +1,7 @@
 # Rocinante Command Center
 
+![Rocinante Command Center simulated navigation](assets/overview-2026-10-24.png)
+
 Rocinante Command Center turns a fictional ship interface into an interactive entertainment experience. Navigation, ship systems, crew information and communications share a responsive command deck that users can explore and rearrange. All telemetry and contacts are simulated; the experience does not represent real spacecraft monitoring.
 
 ## Tech stack
