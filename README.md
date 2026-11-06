@@ -2,46 +2,38 @@
 
 ![Rocinante Command Center simulated navigation](assets/overview-2026-10-24.png)
 
-Rocinante Command Center turns a fictional ship interface into an interactive entertainment experience. Navigation, ship systems, crew information and communications share a responsive command deck that users can explore and rearrange. All telemetry and contacts are simulated; the experience does not represent real spacecraft monitoring.
+Rocinante Command Center is a fictional ship interface you can operate: a command deck for a corvette-class light frigate with three sections, four switchable scenarios, a live-moving contact picture, a 3D solar system and hull schematic, and panels you can resize. Every reading, crew member, contact and radio channel is generated in the browser by a small simulation; nothing on it is a real observation of a real spacecraft. It is built for people who enjoy science-fiction interfaces and want one that behaves like a working one.
 
 ## Tech stack
 
 | Layer | Technologies |
 |---|---|
-| Core stack | React; JavaScript; Three.js; HTML; CSS |
+| Interface | React 18, JavaScript, HTML and CSS with Tailwind utility classes |
+| 3D and charts | Three.js for the solar system, hull, antenna and signal-field scenes; Recharts for the history plots |
+| Simulation | A local step simulation that advances velocity, fuel, drive temperature, shield strength and signal interference over time |
+| Build | Vite |
 
-## Explore navigation and tactical views
+## Scenarios
 
-Navigation and tactical displays offer an animated view of the fictional situation around the ship. Select contacts and inspect the available details, then open the solar view when a wider perspective is useful. The interaction is part of the simulation rather than a source of real-world observations.
+A scenario selector in the header switches the whole ship between four situations: Cruise, High-G Burn, Emergency and Comms Interference. Each one moves the same instruments toward a different target. A burn raises thrust, drive temperature and acceleration together; the emergency scenario shifts power toward defence and cuts the drive; interference raises signal loss, latency and noise on the radio channels. The values ease toward the new targets instead of jumping, and the system log records the change, so the deck reacts as one connected machine.
 
-The navigation and tactical areas provide different entry points into the command-deck experience. Explore them in relation to the selected situation rather than as isolated decorative panels.
+## Nav and Tactical
 
-## Inspect ship and crew
+The first section is the navigation picture. A sensor grid shows generated contacts that move over time, and selecting one makes it the active contact across the deck. Contact Analysis and Contact Vector describe the selected object, and Attitude and Course with Navigation Instruments show the ship's own heading and motion. Encounter Forecast projects the selected contact's relative path over a horizon of 60, 180 or 300 seconds, draws a safety radius of 2,000, 5,000 or 10,000 km and marks the closest point of approach with its time and distance. The forecast is a straight-line approximation of the simulated motion. A fullscreen solar-system view gives the wider tactical picture.
 
-Ship and crew areas bring fictional system readings and personnel information into the same command deck. Telemetry charts help communicate change within the scenario. The fullscreen hull view adds an interactive way to explore the ship's presentation.
+## Ship and Crew
 
-Ship and crew views make the fictional vessel easier to inspect beyond its exterior. Move between systems and personnel to explore how the command centre presents its world.
+The second section covers the vessel itself. Propulsion Systems and the Epstein Drive Core show drive state, Power Distribution shows how demand is split, and Shield Grid Status with the Shield Integrity Map tracks the six shield sectors. Crew Vitals and G-Load with its history plot, a Duty Schedule and a Deck Plan cover the people aboard, and Life Support and Weapons Status complete the systems list. A fullscreen Hull Schematic opens the ship model with reactor and drive-temperature callouts.
 
-## Work with communications and sensors
+## Comms and Sensors
 
-Radio-channel selection, sensor displays and a spectrum-style analyser create another part of the command experience. The interactive antenna and signal-field view supports dragging, zooming and resetting. These controls let the user explore the simulated equipment instead of only watching a static display.
+The third section holds five radio channels from fleet comms and emergency to deep-space and distress beacon, each with a frequency and a status. Selecting a channel drives the Antenna Array and the signal field, and these 3D views can be dragged, zoomed with the wheel or moved with the arrow keys, and reset. A wideband spectrum analyser and an EM spectrum analysis show the band, Sensor Sweep Log keeps the sweeps, and Advanced Sensors adds diagnostics with a sensor band, a view and a minimum confidence setting that open in fullscreen.
 
-Communications and sensors add another perspective to the same fictional setting. Keeping these areas within the deck makes exploration feel connected across the available stations.
+## Arrange the deck
 
-## Arrange the command deck
-
-Panels can be resized to suit the current focus, with saved layout preferences and a reset option. Fullscreen and navigation-hiding controls make more room for a detailed view. Smaller screens keep the experience readable through vertical navigation.
-
-An adaptable layout lets the viewer give more room to the area currently being explored. The command centre can remain readable as attention moves between its panels.
-
-## Follow a coherent fictional world
-
-Animated readouts, a system log and coordinated views give the interface continuity while it runs. The project combines visual design and interaction around an explicitly fictional setting. Its value is an engaging command-deck experience with controls that invite exploration.
+Panels are resizable and the sizes are remembered between visits in the browser. A reset control in the header restores the default layout. Fullscreen buttons expand the solar system, hull, forecast and sensor diagnostics, and on narrower screens the panels stack into a single column. The system log lists timestamped INFO, WARNING and ALERT entries, so a scenario change or a new contact event stays readable after it happens.
 
 Explore [Rocinante Command Center](https://logicencoder.com/rocinante/).
-
-The product is an interactive fictional workspace. Its coherent presentation is part of the experience; fictional ship information should not be confused with observations from an actual spacecraft.
-
 
 ---
 
