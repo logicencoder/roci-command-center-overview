@@ -1,6 +1,6 @@
 # Rocinante Command Center
 
-![Rocinante Command Center simulated navigation](assets/overview-2026-10-24.png)
+![Rocinante Command Center simulated navigation](assets/rocinante-command-center-simulated-navigation.png)
 
 Rocinante Command Center is a fictional ship interface you can operate: a command deck for a corvette-class light frigate with three sections, four switchable scenarios, a live-moving contact picture, a 3D solar system and hull schematic, and panels you can resize. Every reading, crew member, contact and radio channel is generated in the browser by a small simulation; nothing on it is a real observation of a real spacecraft. It is built for people who enjoy science-fiction interfaces and want one that behaves like a working one.
 
