@@ -42,3 +42,5 @@ Private code: [roci-command-center](https://github.com/logicencoder/roci-command
 See [REPOS.md](REPOS.md) for related repositories.
 
 **[Logic Encoder](https://logicencoder.com)** · [GitHub](https://github.com/logicencoder) · [Contact](https://logicencoder.com/contact/)
+
+<!-- TODO(screenshots, 2026-11-07): screenshots from the operator -->
